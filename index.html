@@ -4,87 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basecamp | Travel Adventures</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>SignUp Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+    <div class="mainDiv">
+        <form action="" id="signup">
+            <h2>CREATE ACCOUNT</h2>
 
-     <header>
-        <div class="nav-container">
-            <h1>BASECAMP</h1>
-            <nav class="nav-links">
-                <ul id="navLinks">
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#features">FEATURES</a></li>
-                    <li><a href="#destination">DESTINATIONS</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Adventure Awaits</h1>
-                <p>Discover the world with our curated travel experiences.</p>
-                <a href="#contact" class="hero-btn">Start Your Journey</a>
+            <div class="inputDiv">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Full Name">
+                <p id="nameError"></p>
             </div>
-        </section>
 
-        <section id="features" class="features">
-            <h2>OUR FEATURES</h2>
-            <div class="feature-grid">
-                <div class="card">
-                    <h3>Guided Tours</h3>
-                    <p>Expert local guides.</p>
-                </div>
-                <div class="card">
-                    <h3>Best Prices</h3>
-                    <p>Value for your money.</p>
-                </div>
-                <div class="card">
-                    <h3>24/7 Support</h3>
-                    <p>Always here for you.</p>
-                </div>
+            <div class="inputDiv">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email">
+                <p id="emailError"></p>
             </div>
-        </section>
 
-        <section id="destinations" class="destinations">
-            <h2>POPULAR DESTINATIONS</h2>
-            <div class="dest-grid">
-                <article class="card"><img src="images/Swiss Alps.png" alt="Mountain">
-                    <h3>Swiss Alps</h3>
-                </article>
-                <article class="card"><img src="images/Bali Coast.png" alt="Beach">
-                    <h3>Bali Coast</h3>
-                </article>
-                <article class="card"><img src="images/Kyoto.png" alt="City">
-                    <h3>Kyoto</h3>
-                </article>
+            <div class="inputDiv">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel" id="phoneNumber" placeholder="Phone Number">
+                <p id="phoneNumberError"></p>
             </div>
-        </section>
 
-        <section id="contact" class="contact">
-            <h2>GET IN TOUCH</h2>
-            <form>
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" rows="5" required></textarea>
-                <button type="submit" class="send-btn">Send Message</button>
-            </form>
-        </section>
-    </main>
+            <div class="inputDiv">
+                <label for="location">Location / City</label>
+                <input type="text" id="location" placeholder="Location">
+                <p id="locationError"></p>
+            </div>
 
-    <footer>
-        <p>&copy; 2026 Basecamp Travel App.</p>
-    </footer>
+            <div class="inputDiv">
+                <label for="password">Password</label>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Password">
+                    <button type="button" id="togglePassword" class="eye-btn" aria-label="Show password">
+                        <i class="fa fa-eye" id="eyeIcon"></i>
+                    </button>
+                </div>
+                <p id="passwordError"></p>
+            </div>
+
+            <div class="inputDiv">
+                <label for="ConfirmPassword">Confirm Password</label>
+                <div class="password-container">
+                    <input type="password" id="ConfirmPassword" placeholder="Confirm Password">
+                    <button type="button" id="toggleConfirmPassword" class="eye-btn" aria-label="Show confirm password">
+                        <i class="fa fa-eye" id="confirmEyeIcon"></i>
+                    </button>
+                </div>
+                <p id="confirmPasswordError"></p>
+            </div>
+
+            <div class="btnDiv">
+                <button id="submitBtn" type="submit">Submit</button>
+                <button id="resetBtn" type="reset">Reset</button>
+            </div>
+
+            <div>
+                <p class="final">Already have an account? <a href="SignIn.html">Login</a></p>
+            </div>
+
+        </form>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
