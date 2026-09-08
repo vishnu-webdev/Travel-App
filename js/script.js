@@ -161,8 +161,8 @@ if (signinForm) {
             const matchedUser = users.find(user => user.email === email && user.password === password);
 
             if (matchedUser) {
-                // alert("Sign In successful! Redirecting to Tourist Landing Page.");
-                window.location.href = "index.html";
+                alert("Sign In successful! Redirecting to Tourist Landing Page.");
+                window.location.href = "travel.html";
             } else {
                 if (passwordError) {
                     passwordError.style.color = "red";
