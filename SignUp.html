@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="mainDiv">
+        <form action="" id="signup">
+            <h2>CREATE ACCOUNT</h2>
+
+            <div class="inputDiv">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Full Name">
+                <p id="nameError"></p>
+            </div>
+
+            <div class="inputDiv">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email">
+                <p id="emailError"></p>
+            </div>
+
+            <div class="inputDiv">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel" id="phoneNumber" placeholder="Phone Number">
+                <p id="phoneNumberError"></p>
+            </div>
+
+            <div class="inputDiv">
+                <label for="location">Location / City</label>
+                <input type="text" id="location" placeholder="Location">
+                <p id="locationError"></p>
+            </div>
+
+            <div class="inputDiv">
+                <label for="password">Password</label>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Password">
+                    <button type="button" id="togglePassword" class="eye-btn" aria-label="Show password">
+                        <i class="fa fa-eye" id="eyeIcon"></i>
+                    </button>
+                </div>
+                <p id="passwordError"></p>
+            </div>
+
+            <div class="inputDiv">
+                <label for="ConfirmPassword">Confirm Password</label>
+                <div class="password-container">
+                    <input type="password" id="ConfirmPassword" placeholder="Confirm Password">
+                    <button type="button" id="toggleConfirmPassword" class="eye-btn" aria-label="Show confirm password">
+                        <i class="fa fa-eye" id="confirmEyeIcon"></i>
+                    </button>
+                </div>
+                <p id="confirmPasswordError"></p>
+            </div>
+
+            <div class="btnDiv">
+                <button id="submitBtn" type="submit">Submit</button>
+                <button id="resetBtn" type="reset">Reset</button>
+            </div>
+
+            <div>
+                <p class="final">Already have an account? <a href="SignIn.html">Login</a></p>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

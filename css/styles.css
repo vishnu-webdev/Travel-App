@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.nav-container {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: rgb(34, 31, 31);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-container h1 {
+    letter-spacing: 4px;
+    font-size: 35px;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(34, 31, 31);
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: beige;
+    text-decoration: underline;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    background-color: black;
+    width: 50px;
+    height: 5px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/hero-section-banner.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bo: 4rem;
+}
+
+.feature-grid,
+.dest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 2rem 5%;
+    justify-items: center;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 2rem auto;
+    gap: 15px;
+    padding: 0 1rem;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.send-btn {
+    background: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer{
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle-label {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        
+        /* Replaced overflow: hidden and max-height with opacity/visibility for backdrop-filter support */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease-in-out;
+        gap: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    /* Active state when hamburger is clicked */
+    /* Active state when hamburger is clicked */
+    .nav-links ul.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        background-color: rgba(150, 158, 176, 0.9); /* Rich dark slate with a strong blur effect */
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+    }
+
+    /* Ensure link text turns white for readability on the dark background */
+    .nav-links ul.active a {
+        color: #ffffff;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}

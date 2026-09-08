@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="mainDiv">
+        <form action="" id="signin">
+            <h2>SIGN IN</h2>
+
+            <div class="inputDiv">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email">
+                <p id="emailError"></p>
+            </div>
+
+            <div class="inputDiv">
+                <label for="password">Password</label>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Password">
+                    <button type="button" id="togglePassword" class="eye-btn" aria-label="Show password">
+                        <i class="fa fa-eye" id="eyeIcon"></i>
+                    </button>
+                </div>
+                <p id="passwordError"></p>
+            </div>
+
+            <div class="btnDiv">
+                <button id="submitBtn" type="submit">Submit</button>
+                <button id="resetBtn" type="reset">Reset</button>
+            </div>
+
+            <div>
+                <p class="final">Create account? <a href="SignUp.html">SignUp</a></p>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('../images/hero-section-banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mainDiv {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3)
+}
+
+h2 {
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.inputDiv {
+    margin-top: 20px;
+}
+
+label {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    letter-spacing: 0.1px;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    border-radius: 12px;
+    border: 2px solid rgba(252, 249, 249, 0.3);
+    background-color: transparent;
+}
+
+button {
+    color: white;
+    background-color: #007bff;
+    text-decoration: none;
+    padding: 10px 60px;
+    border-radius: 12px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.btnDiv {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.final {
+    text-align: center;
+    align-items: center;
+}
+
+a {
+    color: #e7194c;
+}
+
+a:hover {
+    color: #510c1d;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    padding-right: 45px;
+    /* Leaves space for the icon */
+}
+
+.eye-btn {
+    position: absolute;
+    right: 12px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #211f1f;
+    font-size: 1rem;
+}
+
+.eye-btn:hover {
+    background: transparent;
+    color: #000;
+}
